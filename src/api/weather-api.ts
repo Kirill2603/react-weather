@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const instance = axios.create({
+const WeatherInstance = axios.create({
     baseURL: 'https://api.openweathermap.org/data/2.5/',
     // withCredentials: true,
     params: {
@@ -10,11 +10,10 @@ const instance = axios.create({
 
 export const weatherAPI = {
     weatherByCity(param: any) {
-        debugger
-        return instance.get(`weather?q=${param}`)
+        return WeatherInstance.get(`weather?q=${param}`)
     },
     weatherByCity5days(param: any) {
-        return instance.get(`forecast?q=${param}`)
+        return WeatherInstance.get(`forecast?q=${param}`)
     }
 
 }

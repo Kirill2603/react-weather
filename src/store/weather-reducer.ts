@@ -1,5 +1,5 @@
 import {Dispatch} from "redux";
-import {weatherAPI} from "../api/api";
+import {weatherAPI} from "../api/weather-api";
 
 type InitWeatherStateType = {
     city: string
